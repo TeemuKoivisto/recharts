@@ -267,6 +267,7 @@ const data03 = [
   { date: 'Nov 11 2016', price: 108.43 },
   { date: 'Nov 14 2016', price: 105.71 },
   { date: 'Nov 15 2016', price: 107.11 },
+  { date: 'Nov 15 2016', price: 108.11 }, // DUPLICATE date
   { date: 'Nov 16 2016', price: 109.99 },
   { date: 'Nov 17 2016', price: 109.95 },
   { date: 'Nov 18 2016', price: 110.06 },
@@ -565,6 +566,7 @@ export default class Demo extends Component {
               labelStyle={{ fontWeight: 'bold', color: '#666666' }}
             />
             <Line dataKey="price" stroke="#ff7300" dot={false} />
+            <ReferenceLine x="Nov 15 2016" stroke="red" label="Reference line" />
             <Brush dataKey="date" startIndex={data03.length - 40}>
               <AreaChart>
                 <CartesianGrid />
